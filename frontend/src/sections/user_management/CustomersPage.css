@@ -1,0 +1,306 @@
+/* Vertical Steps */
+.vertical-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vertical-step {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.vertical-step:hover {
+  background-color: #f8f9fa;
+}
+
+.vertical-step.active {
+  background-color: #e9f7ff;
+  border-left-color: #0d6efd;
+}
+
+.vertical-step.has-error {
+  border-left-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.vertical-step.active .step-number {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.vertical-step.has-error .step-number {
+  background-color: #dc3545;
+  color: white;
+}
+
+.step-number.completed {
+  background-color: #198754;
+  color: white;
+}
+
+.step-info {
+  flex-grow: 1;
+}
+
+.step-title {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.step-status {
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+.step-count {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.step-error-icon {
+  margin-left: 10px;
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+/* Step completion badge */
+.step-completion-badge {
+  background-color: #e9f7ff;
+  color: #0d6efd;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Form steps */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* Modal size adjustments */
+.customer-modal .modal-dialog {
+  max-width: 1400px;
+}
+
+.customer-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Document preview styles */
+.document-preview {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.document-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Validation styles */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+/* Progress bar (optional, if you want to keep it) */
+.premium-progress {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.premium-progress-bar {
+  height: 100%;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+/* Step validation status */
+.step-validation-status {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.step-validation-status.valid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.step-validation-status.invalid {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+/* Enhanced Document Upload Styles */
+.document-upload-container {
+  transition: all 0.3s ease;
+}
+
+.document-drop-zone {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px dashed #dee2e6;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.document-drop-zone:hover {
+  border-color: #0d6efd;
+  background: linear-gradient(135deg, #e9f7ff 0%, #d1ecff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.document-drop-zone.drag-over {
+  border-color: #0d6efd;
+  background: linear-gradient(135deg, #d1ecff 0%, #b3d9ff 100%);
+  transform: scale(1.02);
+}
+
+.drop-zone-content {
+  transition: all 0.3s ease;
+}
+
+.document-drop-zone:hover .drop-zone-content {
+  transform: scale(1.05);
+}
+
+.document-preview-card {
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.document-preview-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.document-preview-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.document-preview-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.document-icon-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.document-icon-container:hover {
+  background-color: #f8f9fa !important;
+  transform: scale(1.05);
+}
+
+/* Remove button styles */
+.btn-sm {
+  transition: all 0.2s ease;
+}
+
+.btn-sm:hover {
+  transform: scale(1.1);
+}
+
+/* Text truncation for long filenames */
+.text-truncate {
+  max-width: 200px;
+}
+
+/* Status indicators */
+.text-success small {
+  font-weight: 500;
+}
+
+.text-info small {
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .document-preview-image,
+  .document-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .text-truncate {
+    max-width: 150px;
+  }
+}
+
+/* Animation for file upload */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.document-drop-zone:active {
+  animation: pulse 0.3s ease;
+}
+
+/* Enhanced card styling */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* Improved spacing */
+.mb-4.document-upload-container {
+  margin-bottom: 1.5rem !important;
+}
